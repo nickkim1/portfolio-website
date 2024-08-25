@@ -1,38 +1,128 @@
+/* old tailwind imports */
 /* @tailwind base;
 @tailwind components;
 @tailwind utilities; */
 
+/*********************************************************************/
 /* Defaults */
 * {
-  font-family: Arial, Helvetica, sans-serif;
+    font-family: sans-serif;
 } 
 
+/* Allows for full extension of all constituent elements */
+body { 
+  margin: 0;
+  background-color: lightgrey;
+}
+
 h1 h2 h3 h4 h5 h6 {
-  padding: 0;
   margin: 0;
 }
 
-
-/* NavBar Styling */
-nav {
-  background-color: rgb(0, 255, 162);
-  color: white;
-  margin: auto;
-  text-align: center;
-  font-size: 16px;
+/* Set smooth scrolling for toggling */
+html {
+  scroll-behavior: smooth;
 }
 
+/*********************************************************************/
+/* NavBar Styling */
 .nav-wrapper {
-  display: flex;
-  justify-content: space-between;
+  background-color: black;
+  color: white;
+  width: 100%;
+  padding: 15px;
+  font-size: 26;
   font-weight: bold;
 }
 
+.nav-wrapper nav {
+  display: flex; 
+  justify-content: space-between;
+  flex-wrap: wrap; 
+}
 
+.nav-wrapper nav a {
+  text-decoration: none;
+  color: white;
+  margin-left: 40px;
+}
+
+.nav-wrapper nav a:hover {
+  color: gray;
+}
+
+.nav-body:last-child {
+  /* Make sure the linkedin icon is always in view */
+  margin-right: 50px;
+}
+
+.nav-menu-hidden {
+  display: none;
+}
+
+.nav-menu-open {
+    /* Fix the position to keep the navbar in place above other els in the viewport and not push them down */
+    /* Get rid of LHS bullets */
+    /* Also push to the far left with margin-left: auto, but w/ position:absolute that removes from normal document flow so need direct positioning; */
+    position: absolute;
+    right: 0;
+    display: flex;
+    margin-top: 0;
+    padding: 10px;
+  
+    max-width: 150px;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 9999; 
+    background-color: black;
+  }
+  .nav-menu-open li {
+    list-style: none;
+    padding: 5px;
+    margin: auto;
+  }
+  .nav-menu-open a {
+    color: white;
+    text-decoration: none;
+  }
+
+.bar {
+  border: 1px solid white;
+  width: 100%; 
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle:hover {
+  border: 2px solid blue;
+}
+
+@media (max-width: 768px) {
+  .nav-body {
+    display: none;
+  }
+  .nav-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 20px;
+    margin-right: 40px;
+  }
+}
+
+/*********************************************************************/
 /* Hero Section Styling */
 .hero-wrapper {
   display: flex;
   flex-direction: column;
+  margin: 10vh;
+}
+
+.hero-wrapper h3 {
+  margin-left: 10px;
+  color: darkslategray;
 }
 
 .hero-about-me {
@@ -45,24 +135,53 @@ nav {
   padding: 10px;
 }
 
+.hero-about-me a:hover {
+  color: lightcoral;
+}
+
 .hero-about-me img {
   height: auto;
   width: auto;
-  max-width: 150px;
-  max-height: 150px;
-  border-radius: 100%;
+  padding: 5px;
+  max-width: 200px;
+  max-height: 200px;
+  margin-left: 20px;
+  border-radius: 20px;
 }
 
+.hero-about-me a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
 
+/*********************************************************************/
 /* Project Card Styling */
 .card {
   /* SHould probably not hard code this stuff */
-  height: 10rem;
+  height: 100%;
   width: 100%;
   display: flex; 
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
   border-radius: 10px;
+  position: relative;
+}
+
+.card-header {
+  margin-left: 10px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.card-footer a {
+  margin: 10px;
+  font-size: 20px;
 }
 
 .card a {
@@ -70,81 +189,43 @@ nav {
   color: black;
 }
 
+.card a:hover {
+  color: lightcoral;
+}
+
+/*********************************************************************/
+/* Project Listing Styling */
+.projects-wrapper {
+   margin: 10vh;
+}
+
+.projects-wrapper h3 {
+  color: darkslategray;
+}
+
 /* Project Listing styling */
 .project-listings {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: 10px;
 }
 
-
-
-
-/* :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-} */
-
-/* a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+/*********************************************************************/
+/* MEDIA QUERIES */
+/* Stack listings when the window is too small */
+@media (max-width: 768px) {
+  .project-listings {
+    grid-template-columns: 1fr;
   }
-  a:hover {
-    color: #747bff;
+}
+
+@media (max-width: 768px) {
+  .hero-about-me {
+    grid-template-columns: 1fr;
   }
-  button {
-    background-color: #f9f9f9;
+
+  .hero-about-me img {
+    padding: 5px;
+    margin: auto;
   }
-} */
+}

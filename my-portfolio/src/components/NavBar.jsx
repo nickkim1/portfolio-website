@@ -1,17 +1,108 @@
 import { NavLink } from "react-router-dom";
+import { useState, useEffect } from 'react'; 
+import { Pdf } from '../../public/resume.pdf';
 
 const NavBar = () => {
+
+  const [isOpen, setIsOpen] = useState(false);
+  
+  // Toggle to opposite 
+  const toggleMenuBars = () => {
+    setIsOpen(!isOpen);
+  }
+
+  //Set window width
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 768) {
+        setIsOpen(false);
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
-    <nav>
+    <>
       <div className="nav-wrapper">
-        <a className="name">NK</a>
-        <a className="about-me">About Me</a>
-        <a className="resume" >Resume</a>
-        <a className="projects">Projects</a>
-        <a className="github" href=""><i className="fab fa-github"></i></a>
-        <a className="linkedin" href=""><i className="fab fa-linkedin"></i></a>
+        <nav>
+          <div className="name">
+            <a className="name-link">NK</a>
+          </div>
+
+          <div className="nav-toggle" onClick={toggleMenuBars}>
+            <span className="bar"></span>
+            <span className="bar"></span>
+            <span className="bar"></span>
+          </div>
+
+          <div className="nav-body">
+            <a className="about-me" href="#hero-wrapper">
+              About
+            </a>
+            <a className="resume" href={Pdf} target="_blank">
+              Resume
+            </a>
+            <a className="projects" href="#projects-wrapper">
+              Projects
+            </a>
+            <a
+              className="github"
+              href="https://github.com/nickkim1"
+              target="_blank"
+            >
+              <i className="fab fa-github"></i>
+            </a>
+            <a
+              className="linkedin"
+              href="https://www.linkedin.com/in/nicolas-kim-119abc/"
+              target="_blank"
+            >
+              <i className="fab fa-linkedin"></i>
+            </a>
+          </div>
+        </nav>
       </div>
-    </nav>
+
+      {/* Conditional rendering of a navigation menu upon 'too small' - media query triggered when <768px */}
+      <ul className={`nav-menu-${isOpen ? "open" : "hidden"}`}>
+        <li>
+          <a className="about-me" href="#hero-wrapper">
+            About
+          </a>
+        </li>
+        <li>
+          <a className="resume" href="../../utils/resume.pdf" target="_blank">
+            Resume
+          </a>
+        </li>
+        <li>
+          <a className="projects" href="#projects-wrapper">
+            Projects
+          </a>
+        </li>
+        <li>
+          <a
+            className="github"
+            href="https://github.com/nickkim1"
+            target="_blank"
+          >
+            <i className="fab fa-github"></i>
+          </a>
+        </li>
+        <li>
+          <a
+            className="linkedin"
+            href="https://www.linkedin.com/in/nicolas-kim-119abc/"
+            target="_blank"
+          >
+            <i className="fab fa-linkedin"></i>
+          </a>
+        </li>
+      </ul>
+    </>
   );
 };
 

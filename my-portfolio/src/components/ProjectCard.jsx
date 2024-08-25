@@ -1,9 +1,42 @@
+import { useState, useEffect } from "react";
+
 const ProjectCard = ({ project }) => {
-    return (
-      <div className="card" style={{backgroundImage: `url(${ project.link })`}}>
-        <a href={project.link}>{project.title}</a>
+
+  const [projectWebLink, setProjectWebLink] = useState("404");
+
+  // Redirect to 404 if I don't have a website
+  useEffect(() => {
+    const projectLink =
+      project.website_link === "404" ? "404-page" : project.website_link; 
+    console.log(projectLink);
+    setProjectWebLink(projectLink);
+  }, []); 
+
+
+  return (
+    <div
+      className="card"
+      style={{ backgroundImage: `url(${project.background_img})` }}
+    >
+      <div className="card-header">
+        <h2>{project.title}</h2>
+        <p>{project.description}</p>
       </div>
-    );
-}
+      <div className="card-footer">
+        <div className="card-stack">
+          <span>{project.stack}</span>
+        </div>
+        <div className="card-links">
+          <a href={project.github_link}>
+            <i className="fab fa-github"></i>
+          </a>
+          <a href={projectWebLink} target="_blank">
+            <i className="fa fa-external-link"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default ProjectCard;

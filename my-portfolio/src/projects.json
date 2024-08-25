@@ -1,24 +1,40 @@
 {
     "projects": [
-        {
-          "title": "DeepChrome",
-          "link": "https://cdn.mos.cms.futurecdn.net/k6okX2VVUg4qWoyxuNLsf7.jpg",
-          "img": ""
-        }, 
-        {
-          "title": "DeepChrome",
-          "link": "https://cdn.mos.cms.futurecdn.net/k6okX2VVUg4qWoyxuNLsf7.jpg",
-          "img": ""
-        }, 
-        {
-          "title": "DeepChrome",
-          "link": "https://cdn.mos.cms.futurecdn.net/k6okX2VVUg4qWoyxuNLsf7.jpg",
-          "img": ""
-        }, 
-        {
-          "title": "DeepChrome",
-          "link": "https://cdn.mos.cms.futurecdn.net/k6okX2VVUg4qWoyxuNLsf7.jpg",
-          "img": ""
-        }
+      {
+        "title": "DeepChrome",
+        "background_img": "https://cdn.mos.cms.futurecdn.net/k6okX2VVUg4qWoyxuNLsf7.jpg",
+        "github_link": "",
+        "description": "1D CNN, XGBoost, Random Forest, SVM classifiers for predicting gene expression from ChIP-seq data.",
+        "website_link": "404",
+        "img": "",
+        "stack": "Python, PyTorch, Bash"
+      },
+      {
+        "title": "DeepChrome",
+        "background_img": "https://cdn.mos.cms.futurecdn.net/k6okX2VVUg4qWoyxuNLsf7.jpg",
+        "github_link": "",
+        "description": "1D CNN, XGBoost, Random Forest, SVM classifiers for predicting gene expression from ChIP-seq data.",
+        "website_link": "404",
+        "img": "",
+        "stack": "Python, PyTorch, Bash"
+      },
+      {
+        "title": "DeepChrome",
+        "background_img": "https://cdn.mos.cms.futurecdn.net/k6okX2VVUg4qWoyxuNLsf7.jpg",
+        "github_link": "",
+        "description": "1D CNN, XGBoost, Random Forest, SVM classifiers for predicting gene expression from ChIP-seq data.",
+        "website_link": "404",
+        "img": "",
+        "stack": "Python, PyTorch, Bash"
+      },
+      {
+        "title": "DeepChrome",
+        "background_img": "https://cdn.mos.cms.futurecdn.net/k6okX2VVUg4qWoyxuNLsf7.jpg",
+        "github_link": "",
+        "description": "1D CNN, XGBoost, Random Forest, SVM classifiers for predicting gene expression from ChIP-seq data.",
+        "website_link": "404",
+        "img": "",
+        "stack": "Python, PyTorch, Bash"
+      }
     ]
 }

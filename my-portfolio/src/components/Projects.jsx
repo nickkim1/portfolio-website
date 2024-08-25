@@ -11,9 +11,9 @@ const Projects = () => {
     useEffect(() => {setPrj(projects["projects"]);}, []);
 
     return (
-        <div className="projects-wrapper">
+        <div className="projects-wrapper" id="projects-wrapper">
             <h3>Projects</h3>
-            <p>Here are some of my projects</p>
+            <p>Here are some of the projects that I am proud of!</p>
             <div className="project-listings">
                 {projects["projects"].map((project, index) => (
                     <ProjectCard key={index} project={project} />
