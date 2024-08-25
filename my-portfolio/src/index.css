@@ -1,6 +1,84 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
+
+/* Defaults */
+* {
+  font-family: Arial, Helvetica, sans-serif;
+} 
+
+h1 h2 h3 h4 h5 h6 {
+  padding: 0;
+  margin: 0;
+}
+
+
+/* NavBar Styling */
+nav {
+  background-color: rgb(0, 255, 162);
+  color: white;
+  margin: auto;
+  text-align: center;
+  font-size: 16px;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+
+/* Hero Section Styling */
+.hero-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-about-me {
+  display: grid;
+  grid-template-columns: 0.8fr 0.2fr;
+}
+
+.hero-about-me p {
+  margin: auto;
+  padding: 10px;
+}
+
+.hero-about-me img {
+  height: auto;
+  width: auto;
+  max-width: 150px;
+  max-height: 150px;
+  border-radius: 100%;
+}
+
+
+/* Project Card Styling */
+.card {
+  /* SHould probably not hard code this stuff */
+  height: 10rem;
+  width: 100%;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.card a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Project Listing styling */
+.project-listings {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+
+
 
 /* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
