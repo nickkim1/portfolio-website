@@ -1,5 +1,5 @@
 import ProjectCard from '../components/ProjectCard';
-import projects from '../projects.json'
+import projects from '../assets/projects.json'
 import {useState, useEffect } from 'react';
 
 const Projects = () => {
@@ -13,7 +13,7 @@ const Projects = () => {
     return (
         <div className="projects-wrapper" id="projects-wrapper">
             <h3>Projects</h3>
-            <p>Here are some of the projects that I am proud of!</p>
+            <p>Here are some of my projects!</p>
             <div className="project-listings">
                 {projects["projects"].map((project, index) => (
                     <ProjectCard key={index} project={project} />

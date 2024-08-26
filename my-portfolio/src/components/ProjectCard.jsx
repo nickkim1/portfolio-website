@@ -23,7 +23,7 @@ const ProjectCard = ({ project }) => {
           <span>{project.stack}</span>
         </div>
         <div className="card-links">
-          <a href={project.github_link}>
+          <a href={project.github_link} target="_blank">
             <i className="fab fa-github"></i>
           </a>
           <a href={projectWebLink} target="_blank">
