@@ -3,17 +3,17 @@ import { FaExclamationTriangle } from "react-icons/fa";
 
 const NotFoundPage = () => {
   return (
-    <section className="" id="404-page">
-      <FaExclamationTriangle className="" />
-      <h1 className="">404 Not Found</h1>
-      <p className="">This page does not exist</p>
-      <Link
-        to="/"
-        className=""
-      >
-        Go Back
-      </Link>
-    </section>
+    <div className="notfound-page-wrapper">
+      <section id="404-page">
+        <FaExclamationTriangle className="" />
+        <h1>404 Not Found</h1>
+        <img src="src/images/panda.png"></img>
+        <p>Whoops still under construction! Page doesn't seem to exist...</p>
+          <Link to="/" className="notfound-redirect-link">
+            Go Back
+          </Link>
+      </section>
+    </div>
   );
 };
 export default NotFoundPage;

@@ -8,16 +8,12 @@ const ProjectCard = ({ project }) => {
   useEffect(() => {
     const projectLink =
       project.website_link === "404" ? "404-page" : project.website_link; 
-    console.log(projectLink);
     setProjectWebLink(projectLink);
   }, []); 
 
-
   return (
-    <div
-      className="card"
-      style={{ backgroundImage: `url(${project.background_img})` }}
-    >
+    <div className="card">
+      <img className="card-img" src={project.background_img}></img>
       <div className="card-header">
         <h2>{project.title}</h2>
         <p>{project.description}</p>

@@ -6,13 +6,14 @@
 /*********************************************************************/
 /* Defaults */
 * {
-    font-family: sans-serif;
+    /* font-family: Open Sans; */
+    font-family: Poppins;
 } 
 
 /* Allows for full extension of all constituent elements */
 body { 
   margin: 0;
-  background-color: lightgrey;
+  background-color: F6FFF8;
 }
 
 h1 h2 h3 h4 h5 h6 {
@@ -25,12 +26,52 @@ html {
 }
 
 /*********************************************************************/
+/* Not Found Page */
+.notfound-page-wrapper {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.notfound-page-wrapper img {
+  width: auto;
+  height: auto;
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.notfound-redirect-link {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.notfound-redirect-link:hover {
+  color: lightcoral;
+}
+
+/*********************************************************************/
+/* Name styling */
+.name-img {
+  height: auto;
+  width: auto;
+  max-height: 30px;
+  max-width: 30px;
+  border-radius: 10px;
+  position: absolute;
+  left: 100px;
+  top: 17px;
+}
+
+/*********************************************************************/
 /* NavBar Styling */
 .nav-wrapper {
-  background-color: black;
+  background-color: rgb(164, 195, 178);
   color: white;
   width: 100%;
-  padding: 15px;
+  padding: 20px;
   font-size: 26;
   font-weight: bold;
 }
@@ -48,7 +89,8 @@ html {
 }
 
 .nav-wrapper nav a:hover {
-  color: gray;
+  /* color: rgb(255, 224, 167); */
+  color: rgb(64, 105, 64);
 }
 
 .nav-body:last-child {
@@ -74,7 +116,7 @@ html {
     justify-content: center;
     flex-direction: column;
     z-index: 9999; 
-    background-color: black;
+    background-color: rgb(164, 195, 178);
   }
   .nav-menu-open li {
     list-style: none;
@@ -94,10 +136,10 @@ html {
 .nav-toggle {
   display: none;
 }
-
+/* 
 .nav-toggle:hover {
   border: 2px solid blue;
-}
+} */
 
 @media (max-width: 768px) {
   .nav-body {
@@ -122,7 +164,9 @@ html {
 
 .hero-wrapper h3 {
   margin-left: 10px;
-  color: darkslategray;
+  /* color: darkslategray; */
+  /* color: rgb(52, 106, 82); */
+  color: lightcoral;
 }
 
 .hero-about-me {
@@ -150,7 +194,7 @@ html {
 }
 
 .hero-about-me a {
-  color: white;
+  color: rgb(164, 195, 178);
   text-decoration: none;
   font-weight: bold;
 }
@@ -165,6 +209,21 @@ html {
   flex-direction: column;
   border-radius: 10px;
   position: relative;
+  color: rgb(246, 255, 248);
+  box-shadow: 2px 2px 2px rgb(204, 227, 222);
+}
+
+.card-img {
+  /* thanks chat for this code */
+  position: absolute; /* Positions the image absolutely within the container */
+  top: 0;
+  left: 0;
+  width: 100%; /* Stretches the image to fill the width of the container */
+  height: 100%; /* Stretches the image to fill the height of the container */
+  object-fit: cover; /* Ensures the image covers the container while maintaining aspect ratio */
+  z-index: -1;
+  border-radius: 10px;
+  filter: brightness(30%);
 }
 
 .card-header {
@@ -182,11 +241,8 @@ html {
 .card-footer a {
   margin: 10px;
   font-size: 20px;
-}
-
-.card a {
+  color: rgb(246, 255, 248);
   text-decoration: none;
-  color: black;
 }
 
 .card a:hover {
@@ -200,7 +256,9 @@ html {
 }
 
 .projects-wrapper h3 {
-  color: darkslategray;
+  /* color: darkslategray; */
+  /* color: rgb(52, 106, 82); */
+  color: lightcoral;
 }
 
 /* Project Listing styling */

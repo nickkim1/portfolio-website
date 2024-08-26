@@ -6,7 +6,7 @@ const Hero = () => {
         <h3>About Me</h3>
         <div className="hero-about-me">
           <p>
-            Hey! My name is Nick and I'm a rising junior at Brown University majoring in Applied Mathematics-Computer Science.
+            Hi there! My name is Nick and I'm a rising junior at Brown University majoring in Applied Mathematics-Computer Science.
             I was a machine learning intern at the{" "}
             <a href="https://genomeinformatics.github.io/" target="_blank">
               Genome Informatics Section

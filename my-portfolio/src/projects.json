@@ -1,40 +1,20 @@
 {
     "projects": [
       {
-        "title": "DeepChrome",
-        "background_img": "https://cdn.mos.cms.futurecdn.net/k6okX2VVUg4qWoyxuNLsf7.jpg",
+        "title": "DeepChrome Reimplementation",
+        "background_img": "src/images/deepchrome.png",
         "github_link": "",
         "description": "1D CNN, XGBoost, Random Forest, SVM classifiers for predicting gene expression from ChIP-seq data.",
-        "website_link": "404",
-        "img": "",
+        "website_link": "https://academic.oup.com/bioinformatics/article/32/17/i639/2450757",
         "stack": "Python, PyTorch, Bash"
       },
       {
-        "title": "DeepChrome",
-        "background_img": "https://cdn.mos.cms.futurecdn.net/k6okX2VVUg4qWoyxuNLsf7.jpg",
+        "title": "Aging Eye Classification",
+        "background_img": "src/images/basset_basenji.png",
         "github_link": "",
-        "description": "1D CNN, XGBoost, Random Forest, SVM classifiers for predicting gene expression from ChIP-seq data.",
+        "description": "1D CNN classifiers for predicting differential gene expression by age and sex across mice.",
         "website_link": "404",
-        "img": "",
-        "stack": "Python, PyTorch, Bash"
-      },
-      {
-        "title": "DeepChrome",
-        "background_img": "https://cdn.mos.cms.futurecdn.net/k6okX2VVUg4qWoyxuNLsf7.jpg",
-        "github_link": "",
-        "description": "1D CNN, XGBoost, Random Forest, SVM classifiers for predicting gene expression from ChIP-seq data.",
-        "website_link": "404",
-        "img": "",
-        "stack": "Python, PyTorch, Bash"
-      },
-      {
-        "title": "DeepChrome",
-        "background_img": "https://cdn.mos.cms.futurecdn.net/k6okX2VVUg4qWoyxuNLsf7.jpg",
-        "github_link": "",
-        "description": "1D CNN, XGBoost, Random Forest, SVM classifiers for predicting gene expression from ChIP-seq data.",
-        "website_link": "404",
-        "img": "",
-        "stack": "Python, PyTorch, Bash"
+        "stack": "Python, PyTorch, Bash, R"
       }
     ]
 }

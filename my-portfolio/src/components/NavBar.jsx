@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { useState, useEffect } from 'react'; 
-import { Pdf } from '../../public/resume.pdf';
+import Pdf from '../documents/resume.pdf';
 
 const NavBar = () => {
 
@@ -32,6 +32,10 @@ const NavBar = () => {
             <a className="name-link">NK</a>
           </div>
 
+          <div>
+            <img src="src/images/panda.png" className="name-img"></img>
+          </div>
+
           <div className="nav-toggle" onClick={toggleMenuBars}>
             <span className="bar"></span>
             <span className="bar"></span>
@@ -42,6 +46,7 @@ const NavBar = () => {
             <a className="about-me" href="#hero-wrapper">
               About
             </a>
+            {/* <a onClick={this.onResumeClick}>Resume</a> */}
             <a className="resume" href={Pdf} target="_blank">
               Resume
             </a>

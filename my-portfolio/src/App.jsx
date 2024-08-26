@@ -7,14 +7,15 @@ import {
 
 import MainLayout from './layouts/MainLayout';
 import HomePage from './pages/HomePage';
-import { useState } from "react";
+import NotFoundPage from "./pages/404NotFound";
 
 const App = () => {
 
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<MainLayout />}>
-          <Route index element={<HomePage />} />
+        <Route index element={<HomePage />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Route>
     )
   );
