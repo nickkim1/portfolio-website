@@ -32,9 +32,9 @@ const NavBar = () => {
             <a className="name-link">NK</a>
           </div>
 
-          <div>
+          {/* <div>
             <img src="src/images/panda.png" className="name-img"></img>
-          </div>
+          </div> */}
 
           <div className="nav-toggle" onClick={toggleMenuBars}>
             <span className="bar"></span>
