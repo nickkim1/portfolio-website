@@ -2,7 +2,7 @@
     "projects": [
       {
         "title": "Music@Brown",
-        "background_img": "src/images/music_at_brown.png",
+        "background_img": "music_at_brown.png",
         "github_link": "https://github.com/nickkim1/music_at_brown",
         "description": "A music recommendation platform for Brown students based on Spotify listening interests.",
         "website_link": "https://github.com/nickkim1/music_at_brown",
@@ -10,7 +10,7 @@
       },
       {
         "title": "Transforming SAR",
-        "background_img": "src/images/transforming_sar.png",
+        "background_img": "transforming_sar.png",
         "github_link": "https://github.com/teddyam/LePersonFinder",
         "description": "Software using Vision Transformers to accurately find humans in search and rescue operations.",
         "website_link": "https://github.com/teddyam/LePersonFinder",
@@ -18,7 +18,7 @@
       },
       {
         "title": "WeensyOS",
-        "background_img": "src/images/weensyos.png",
+        "background_img": "weensyos.png",
         "github_link": "https://cs.brown.edu/courses/csci0300/2024/",
         "description": "Toy OS implementing shared and read-only memory, forking and exiting, virtual page allocation, and overlapping virtual address spaces.",
         "website_link": "https://cs.brown.edu/courses/csci0300/2024/",
@@ -26,7 +26,7 @@
       },
       {
         "title": "Aging Eye Classification",
-        "background_img": "src/images/basset_basenji.png",
+        "background_img": "basset_basenji.png",
         "github_link": "https://github.com/nickkim1/aging_eye_classification",
         "description": "1D CNN classifiers for predicting differential gene expression by age and sex across mice on eye data.",
         "website_link": "https://github.com/nickkim1/aging_eye_classification",
@@ -34,11 +34,18 @@
       },
       {
         "title": "DeepChrome Reimplementation",
-        "background_img": "src/images/deepchrome.png",
+        "background_img": "deepchrome.png",
         "github_link": "https://github.com/nickkim1/deepchrome_reimplementation",
         "description": "1D CNN, XGBoost, Random Forest, SVM classifiers for predicting gene expression from ChIP-seq data.",
         "website_link": "https://academic.oup.com/bioinformatics/article/32/17/i639/2450757",
         "stack": "Python, PyTorch, Bash"
+      },{
+        "title": "Maps",
+        "background_img": "maps.png",
+        "github_link": "https://github.com/cs0320-f23/maps-hkmin-nhkim",
+        "description": "Map application displaying historical redlining data in the US, allowing for searching, panning, and toggling functionality.",
+        "website_link": "https://github.com/cs0320-f23/maps-hkmin-nhkim",
+        "stack": "React.js, TypeScript, Java (Spark), HTML/CSS, Maven"
       }
     ]
 }

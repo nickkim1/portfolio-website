@@ -116,7 +116,7 @@ html {
     justify-content: center;
     flex-direction: column;
     z-index: 9999; 
-    background-color: rgb(164, 195, 178);
+    background-color: black;
   }
   .nav-menu-open li {
     list-style: none;

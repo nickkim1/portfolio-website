@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { useState, useEffect } from 'react'; 
-import Pdf from '../documents/resume.pdf';
+import Pdf from '/resume.pdf';
 
 const NavBar = () => {
 
@@ -79,7 +79,7 @@ const NavBar = () => {
           </a>
         </li>
         <li>
-          <a className="resume" href="../../utils/resume.pdf" target="_blank">
+          <a className="resume" href="/resume.pdf" target="_blank">
             Resume
           </a>
         </li>
